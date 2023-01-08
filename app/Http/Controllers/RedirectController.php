@@ -61,8 +61,9 @@ class RedirectController extends Controller
      */
     public function update(Request $request, Redirect $redirect)
     {
+        $redirect->update($request->all());
         return response()->json([
-            'message' => 'Link Atualizado Com Sucesso!',
+            'message' => 'redirect Atualizado Com Sucesso!',
 
             'redirect' => $redirect
         ], 200);
